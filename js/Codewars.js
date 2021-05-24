@@ -1,0 +1,13 @@
+function multiply(a,b){
+    return a * b;
+}
+
+multiply(1,2)
+
+//Your task is to make a function that can take any non-negative integer as an argument and
+// return it with its digits in descending order.
+// Essentially, rearrange the digits to create the highest possible number.
+
+function descendingOrder(n){
+    var reorder = indexof(n)
+}
