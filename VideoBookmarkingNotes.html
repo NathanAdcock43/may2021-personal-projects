@@ -20,15 +20,10 @@
         </form>
 
     <iframe id="videoPlayer" src="https://www.youtube.com/embed/M7lc1UVf-VE" title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
-<!--        <h2>Duration</h2>-->
-<!--        <p><span id="current-time">0:00</span> / <span id="duration">0:00</span></p>-->
-
-<!--        <div id="player">-->
-
-<!--        </div>-->
-
-
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen><span class="ytp-time-current"></span>
+        <span class="ytp-time-duration"></span></iframe>
+        <span class="ytp-time-current"></span>
+        <span class="ytp-time-duration"></span>
 <form class="form" id="notesForm">
             <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>
             <textarea  class= "textField" id="userField" type="text" name="notes" rows="20" placeholder="YOUR NOTES GO HERE, PRESS ENTER TO CREATE A BOOKMARK"></textarea>
@@ -38,5 +33,6 @@
         <script src="js/VideoBookMarkingApp.js" rel="script"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script src="https://apis.google.com/js/api.js"></script>
+
 </body>
 </html>
