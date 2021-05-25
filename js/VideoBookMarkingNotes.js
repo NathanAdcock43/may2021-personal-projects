@@ -32,6 +32,8 @@ $(document).ready(function () {
         //    looking at more API info
         });
     }
+
+
     onYouTubeIframeAPIReady()
 function init() {
         gapi.client.setApiKey(APIv3Key);
