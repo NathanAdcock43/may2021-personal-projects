@@ -22,25 +22,25 @@ $(document).ready(function () {
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var player;
-    function onYouTubeIframeAPIReady() {
-    player = new YT.Player('videoPlayer', {
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-            }
-        //    looking at more API info
-        });
-    }
-
-
-    onYouTubeIframeAPIReady()
-function init() {
-        gapi.client.setApiKey(APIv3Key);
-        gapi.client.load("youtube", "v3", function (){
-            //yt api is ready not sure what to use in this api yet
-        });
-}
+//     var player;
+//     function onYouTubeIframeAPIReady() {
+//     player = new YT.Player('videoPlayer', {
+//         events: {
+//             'onReady': onPlayerReady,
+//             'onStateChange': onPlayerStateChange
+//             }
+//         //    looking at more API info
+//         });
+//     }
+//
+//
+//     onYouTubeIframeAPIReady()
+// function init() {
+//         gapi.client.setApiKey(APIv3Key);
+//         gapi.client.load("youtube", "v3", function (){
+//             //yt api is ready not sure what to use in this api yet
+//         });
+// }
 
 });
 
