@@ -1,15 +1,22 @@
 
 $(document).ready(function () {
 
+    console.info(`loadVideo called`);
+
+    (function loadYoutubeIFrameApiScript() {
+
     var tag = document.createElement('script');
 
     tag.src = "https://www.youtube.com/iframe_api";
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
+    tag.onload = setupPlayer;
+})();
+    var player = null;
 
-    var player;
-    function onYouTubeIframeAPIReady() {
+    function setupPlayer() {
+    window.YT.ready(function(){
         player = new YT.Player('videoPlayer', {
             events: {
                 'onReady': onPlayerReady,
@@ -17,6 +24,7 @@ $(document).ready(function () {
             }
 
         });
+    });
     }
 
     const getYoutubeVideoID = (youtubeURL) => {
