@@ -2,37 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-signin-client_ID" content="365572997645-rksbja6tjvqfd4mua82ummn0hcgdc3e7.apps.googleusercontent.com">
+    <meta name="google-signin-client_ID"
+          content="365572997645-rksbja6tjvqfd4mua82ummn0hcgdc3e7.apps.googleusercontent.com">
     <title>Title</title>
     <link href="css/VideoBookmarkingNotes.css" rel="stylesheet">
 </head>
 <body>
-        <header class="title">TURN YOUR TYPED NOTES INTO <BR> TIMESTAMPED BOOKMARKS FOR VIDEOS</header>
-        <p class="explanation">Enter a URL of a video that you wish to take notes about, type in the text field below and press enter.
-            Each entry will become part of a list of links that will send you to the moment in the video it was created.
-            Want to enter more information on subsequent re-watches? Any entry made after the first viewing will be logged
-            in the original list and ordered to fit chronologically with the videos time. When you are finished save the
-            information for later use or send it to a friend. Enjoy!</p>
-        <form class="form" id="inputURL" name="inputURL">
-            <label class="formLabel" for="userInputtedUrl">ENTER YOUR URL HERE</label>
-            <input id="userInputtedUrl" name="userInputtedUrl" type="text" placeholder="URL">
-            <button class="btn-submit" id="userURLSubmit" >SUBMIT</button>
-        </form>
+<header class="title">TURN YOUR TYPED NOTES INTO <BR> TIMESTAMPED BOOKMARKS FOR VIDEOS</header>
+<p class="explanation">Enter a URL of a video that you wish to take notes about, type in the text field below and press
+    enter.
+    Each entry will become part of a list of links that will send you to the moment in the video it was created.
+    Want to enter more information on subsequent re-watches? Any entry made after the first viewing will be logged
+    in the original list and ordered to fit chronologically with the videos time. When you are finished save the
+    information for later use or send it to a friend. Enjoy!</p>
+<form class="form" id="inputURL" name="inputURL">
+    <label class="formLabel" for="userInputtedUrl">ENTER YOUR URL HERE</label>
+    <input id="userInputtedUrl" name="userInputtedUrl" type="text" placeholder="URL">
+    <button class="btn-submit" id="userURLSubmit">SUBMIT</button>
+</form>
 
-    <iframe id="videoPlayer" src="https://www.youtube.com/embed/M7lc1UVf-VE" title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen><span class="ytp-time-current"></span>
-        <span class="ytp-time-duration"></span></iframe>
-        <span class="ytp-time-current"></span>
-        <span class="ytp-time-duration"></span>
+<iframe id="videoPlayer" src="https://www.youtube.com/embed/M7lc1UVf-VE" title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
+
 <form class="form" id="notesForm">
-            <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>
-            <textarea  class= "textField" id="userField" type="text" name="notes" rows="20" placeholder="YOUR NOTES GO HERE, PRESS ENTER TO CREATE A BOOKMARK"></textarea>
-            <button class="btn-submit" id="userSession" type="submit">SUBMIT</button>
-        </form>
-        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-        <script src="js/VideoBookMarkingApp.js" rel="script"></script>
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-        <script src="https://apis.google.com/js/api.js"></script>
-
+    <div class="progress-background">
+        <div id="progress-bar" class="progress-bar"></div>
+    </div>
+    <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>
+    <textarea class="textField" id="userField" type="text" name="notes" rows="20"
+              placeholder="YOUR NOTES GO HERE, PRESS ENTER TO CREATE A BOOKMARK"></textarea>
+    <div class="counter-background">
+        <div id="counter" class="progress-bar"></div>
+    </div>
+    <button class="btn-submit" id="userSession" type="submit">SUBMIT</button>
+</form>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script src="js/VideoBookMarkingApp.js" rel="script"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://apis.google.com/js/api.js"></script>
 </body>
 </html>
