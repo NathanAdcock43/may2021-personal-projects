@@ -14,7 +14,7 @@ $(document).ready(function () {
         e.preventDefault()
         let searchVid = $('#userInputtedUrl').val();
         youtubeId = getYoutubeVideoID(searchVid)
-        $("#videoPlayer").attr("src", `https://www.youtube.com/embed/${youtubeId}enablejsapi=1`);
+        $("#videoPlayer").attr("src", `https://www.youtube.com/embed/${youtubeId}`);
     });
 
     var tag = document.createElement('script');
@@ -39,16 +39,16 @@ $(document).ready(function () {
     //         }
     //     });
     // }
-    var player;
-    function onYouTubeIframeAPIReady() {
-        player = new YT.Player('videoPlayer', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-            //    looking at more API info
-        });
-    }
+    // var player;
+    // function onYouTubeIframeAPIReady() {
+    //     player = new YT.Player('videoPlayer', {
+    //         events: {
+    //             'onReady': onPlayerReady,
+    //             'onStateChange': onPlayerStateChange
+    //         }
+    //         //    looking at more API info
+    //     });
+    // }
     // onYouTubeIframeAPIReady()
     // function init() {
     //     gapi.client.setApiKey(APIv3Key);
