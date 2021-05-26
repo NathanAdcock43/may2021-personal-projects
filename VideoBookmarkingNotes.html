@@ -25,14 +25,18 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" allowfullscreen></iframe>
 
 <form class="form" id="notesForm">
+
+    <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>
+    <div class="captions-background">
+        <div id="captions" class="captions"></div>
+    </div>
     <div class="progress-background">
         <div id="progress-bar" class="progress-bar"></div>
     </div>
-    <label class="formLabel" for="userField">TYPE A LINE OF NOTES AND PRESS ENTER</label>
     <textarea class="textField" id="userField" type="text" name="notes" rows="20"
               placeholder="YOUR NOTES GO HERE, PRESS ENTER TO CREATE A BOOKMARK"></textarea>
     <div class="counter-background">
-        <div id="counter" class="progress-bar"></div>
+        <div id="counter" class="counter"></div>
     </div>
     <button class="btn-submit" id="userSession" type="submit">SUBMIT</button>
 </form>

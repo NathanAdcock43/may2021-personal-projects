@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+  const main = async () => {
+    const
+            defaultId = 'fJ9rUzIMcZQ', /* Queen – Bohemian Rhapsody */
+            json = await YouTubeCaptionUtil
+                    .fetchCaptions(YouTubeCaptionUtil.videoId() || defaultId),
+            csv = CsvUtil.fromJson(json);
+    console.log(csv);
+  };
+
+  class YouTubeCaptionUtil {
+    static async fetchCaptions(videoId, options) {
+      const
+              opts = { ...YouTubeCaptionUtil.defaultOptions, ...options },
+              response = await fetch(YouTubeCaptionUtil.__requestUrl(videoId, opts)),
+              json = await response.json();
+      return YouTubeCaptionUtil.__parseTranscript(json);
+    }
+    static videoId() {
+      const video_id = window.location.search.split('v=')[1];
+      if (video_id != null) {
+        const ampersandPosition = video_id.indexOf('&');
+        if (ampersandPosition != -1) {
+          return video_id.substring(0, ampersandPosition);
+        }
+      }
+      return null;
+    }
+    static __requestUrl(videoId, { baseUrl, languageId }) {
+      return `${baseUrl}?lang=${languageId}&v=${videoId}&fmt=json3`;
+    }
+    static __parseTranscript({events}) {
+      return events.map(({tStartMs, dDurationMs, segs: [{utf8}]}) => ({
+        start: YouTubeCaptionUtil.__formatTime(tStartMs),
+        dur: YouTubeCaptionUtil.__formatTime(dDurationMs),
+        text: utf8
+      }));
+    }
+    static __formatTime(seconds) {
+      const date = new Date(null);
+      date.setSeconds(seconds);
+      return date.toISOString().substr(11, 8);
+    };
+  }
+  YouTubeCaptionUtil.defaultOptions = {
+    baseUrl: 'https://video.google.com/timedtext',
+    languageId: 'en'
+  };
+
+  class CsvUtil {
+    static fromJson(json, options) {
+      const
+              opts = { ...CsvUtil.defaultOptions, ...options },
+              keys = Object.keys(json[0]).filter(key =>
+                      opts.ignoreKeys.indexOf(key) === -1),
+              lines = [];
+      if (opts.includeHeader) lines.push(keys.join(opts.delimiter));
+      return lines.concat(json
+              .map(entry => keys.map(key => entry[key]).join(opts.delimiter)))
+              .join('\n');
+    }
+  }
+  CsvUtil.defaultOptions = {
+    includeHeader: false,
+    ignoreKeys: ['dur'],
+    delimiter: '\t'
+  };
+
+  main();
+  // .as-console-wrapper { top: 0; max-height: 100% !important; }
+
+</script>
+
+</body>
+</html>

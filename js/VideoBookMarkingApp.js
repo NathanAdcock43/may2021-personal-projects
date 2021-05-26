@@ -1,41 +1,40 @@
-
 $(document).ready(function () {
 
     console.info(`loadVideo called`);
 
     (function loadYoutubeIFrameApiScript() {
 
-    var tag = document.createElement('script');
+        var tag = document.createElement('script');
 
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    tag.onload = setupPlayer;
-})();
+        tag.onload = setupPlayer;
+    })();
     var player = null;
 
     function setupPlayer() {
         console.log("playerSetup")
-    window.YT.ready(function(){
-        player = new YT.Player('videoPlayer', {
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
+        window.YT.ready(function () {
+            player = new YT.Player('videoPlayer', {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                }
+            });
         });
-    });
     }
 
     const getYoutubeVideoID = (youtubeURL) => {
-        youtubeURL = youtubeURL.replace("?v=","?fakeparam=100&video=");
+        youtubeURL = youtubeURL.replace("?v=", "?fakeparam=100&video=");
         let urlParam = new URLSearchParams(youtubeURL);
         let videoID = urlParam.get('video');
         return videoID;
     }
 
 
-        let youtubeId ="";
+    let youtubeId = "";
     $("#userURLSubmit").click(function (e) {
         e.preventDefault()
         let searchVid = $('#userInputtedUrl').val();
@@ -44,86 +43,128 @@ $(document).ready(function () {
     });
 
 
-
-    function onPlayerReady(event)
-    {
+    function onPlayerReady(event) {
         event.target.playVideo();
-        time_total  = convert_to_mins_and_secs(player.getDuration(), 1);
+        time_total = convert_to_mins_and_secs(player.getDuration(), 1);
         // authenticate().then(loadClient);
         // loadClient.ready(execute());
         generateProgressBar();
         buildCurrentTimeDisplay();
 
     }
+
     //for the durations bar (currently functioning and being called)
-    function generateProgressBar()
-    {
+    function generateProgressBar() {
         var current_time = convert_to_mins_and_secs(player.getCurrentTime(), 0);
-        document.getElementById("progress-bar").style.width = (player.getCurrentTime()/player.getDuration())*100+"%";
-        console.log( current_time + " / " + time_total);
+        document.getElementById("progress-bar").style.width = (player.getCurrentTime() / player.getDuration()) * 100 + "%";
         timeout_setter = setTimeout(generateProgressBar, 1000);
     }
+
     //for video time display (currently functioning and being called)
-    function buildCurrentTimeDisplay()
-    {
+    function buildCurrentTimeDisplay() {
         var current_time = convert_to_mins_and_secs(player.getCurrentTime(), 0);
-        document.getElementById("counter").innerHTML= current_time;
+        document.getElementById("counter").innerHTML = current_time;
+        console.log(current_time + " / " + time_total);
         timeout_setter = setTimeout(buildCurrentTimeDisplay, 1000);
     }
+
     //converts seconds to minutes to be used in the progress bar and timer (currently functioning and being called)
-    function convert_to_mins_and_secs(seconds, minus1)
-    {
-        var mins    = (seconds>=60) ?Math.round(seconds/60):0;
-        var secs    = (seconds%60!=0) ?Math.round(seconds%60):0;
-        var secs    = (minus1==true) ?(secs-1):secs; //Youtube always displays 1 sec less than its duration time!!! Then we have to set minus1 flag to true for converting player.getDuration()
-        var time    = mins + ":" + ((secs<10)?"0"+secs:secs);
+    function convert_to_mins_and_secs(seconds, minus1) {
+        var mins = (seconds >= 60) ? Math.round(seconds / 60) : 0;
+        var secs = (seconds % 60 != 0) ? Math.round(seconds % 60) : 0;
+        var secs = (minus1 == true) ? (secs - 1) : secs; //Youtube always displays 1 sec less than its duration time!!! Then we have to set minus1 flag to true for converting player.getDuration()
+        var time = mins + ":" + ((secs < 10) ? "0" + secs : secs);
         return time;
     }
-    // TODO authentication for the google api so that i can grab the caption data (not working or called)
-    function authenticate() {
-        return gapi.auth2.getAuthInstance() /*this seems to be the problem*/
-            .signIn({scope: "https://www.googleapis.com/auth/youtube.force-ssl"})
-            .then(function() { console.log("Sign-in successful"); },
-                function(err) { console.error("Error signing in", err); });
-    }
-    authenticate()
-    function loadClient() {
-        gapi.client.setApiKey(APIv3Key);
-        return gapi.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-            .then(function() { console.log("GAPI client loaded for API"); },
-                function(err) { console.error("Error loading GAPI client for API", err); });
-    }
-    // Make sure the client is loaded and sign-in is complete before calling this method.
-    function execute() {
-        let searchVid = $('#userInputtedUrl').val();
-        return gapi.client.youtube.captions.list({
-            "part": [
-                "snippet"
-            ],
-            "videoId": searchVid,
-        })
-            .then(function(response) {
-                    // Handle the results here (response.result has the parsed body).
-                    console.log("Response", response);
-                },
-                function(err) { console.error("Execute error", err); });
-    }
-    gapi.load("client:auth2", function() {
-        gapi.auth2.init({client_id: "gapiClientID"});
-    });
+
+    //Runs the fetched Json Captions and converts them to CSV
+
+    const main = async () => {
+        const
+            defaultId = await getYoutubeVideoID($('#userInputtedUrl').val()), /* Queen – Bohemian Rhapsody */
+            json = await YouTubeCaptionUtil
+                .fetchCaptions(YouTubeCaptionUtil.videoId() || defaultId),
+            csv = CsvUtil.fromJson(json);
+        document.getElementById("captions").innerHTML = csv;
+        console.log(csv);
+        //    Todo right here
+    };
+
+    //fetch Json caption data
+    class YouTubeCaptionUtil {
+        static async fetchCaptions(videoId, options) {
+            const
+                opts = {...YouTubeCaptionUtil.defaultOptions, ...options},
+                response = await fetch(YouTubeCaptionUtil.__requestUrl(videoId, opts)),
+                json = await response.json();
+            return YouTubeCaptionUtil.__parseTranscript(json);
+        }
+
+        //prep user-inputted YT URL
+        static videoId() {
+            const video_id = window.location.search.split('v=')[1];
+            if (video_id != null) {
+                const ampersandPosition = video_id.indexOf('&');
+                if (ampersandPosition != -1) {
+                    return video_id.substring(0, ampersandPosition);
+                }
+            }
+            return null;
+        }
 
 
+        static __requestUrl(videoId, {baseUrl, languageId}) {
+            return `${baseUrl}?lang=${languageId}&v=${videoId}&fmt=json3`;
+        }
+
+        static __parseTranscript({events}) {
+            return events.map(({tStartMs, dDurationMs, segs: [{utf8}]}) => ({
+                start: YouTubeCaptionUtil.__formatTime(tStartMs),
+                dur: YouTubeCaptionUtil.__formatTime(dDurationMs),
+                text: utf8
+            }));
+        }
+
+        static __formatTime(seconds) {
+            const date = new Date(null);
+            date.setSeconds(seconds);
+            return date.toISOString().substr(11, 8);
+        };
+    }
+
+    YouTubeCaptionUtil.defaultOptions = {
+        baseUrl: 'https://video.google.com/timedtext',
+        languageId: 'en'
+    };
+
+    class CsvUtil {
+        static fromJson(json, options) {
+            const
+                opts = {...CsvUtil.defaultOptions, ...options},
+                keys = Object.keys(json[0]).filter(key =>
+                    opts.ignoreKeys.indexOf(key) === -1),
+                lines = [];
+            if (opts.includeHeader) lines.push(keys.join(opts.delimiter));
+            return lines.concat(json
+                .map(entry => keys.map(key => entry[key]).join(opts.delimiter)))
+                .join('\n');
+        }
+    }
+
+    CsvUtil.defaultOptions = {
+        includeHeader: false,
+        ignoreKeys: ['dur'],
+        delimiter: '\t'
+    };
+
+    main();
 
     // 5. The API calls this function when the player's state changes (works)
-    function onPlayerStateChange(event)
-    {
-        if (event.data === YT.PlayerState.ENDED)
-        {
+    function onPlayerStateChange(event) {
+        if (event.data === YT.PlayerState.ENDED) {
             console.log("END!");
             clearTimeout(timeout_setter);
-        }
-        else
-        {
+        } else {
             console.log(event.data);
         }
     }
