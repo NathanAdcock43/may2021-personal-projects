@@ -168,5 +168,5 @@ $(document).ready(function () {
             console.log(event.data);
         }
     }
-
+//this is where I will need to put the code to control the captions
 });
