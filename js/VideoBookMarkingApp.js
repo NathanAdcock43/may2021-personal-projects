@@ -169,4 +169,6 @@ $(document).ready(function () {
         }
     }
 //this is where I will need to put the code to control the captions
+//Trying to make sure that this is going to work
+
 });
