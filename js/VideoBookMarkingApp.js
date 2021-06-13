@@ -81,8 +81,8 @@ $(document).ready(function () {
 
     const main = async () => {
         const
-            defaultId = await getYoutubeVideoID($('#userInputtedUrl').val()), /* Queen – Bohemian Rhapsody */
-            json = await YouTubeCaptionUtil
+            defaultId =  getYoutubeVideoID($('#userInputtedUrl').val()), /* Queen – Bohemian Rhapsody */
+            json =  YouTubeCaptionUtil
                 .fetchCaptions(YouTubeCaptionUtil.videoId() || defaultId),
             csv = CsvUtil.fromJson(json);
         document.getElementById("captions").innerHTML = csv;
