@@ -15,7 +15,7 @@ body {
     overflow: scroll;
     overflow-scrolling: auto;
     /*object-fit: initial;*/
-    background: url("../Classroom-Images/Desk-Background.png") no-repeat center;
+    background: url("../PersonalProfile-Images/Desk-Background.png") no-repeat center;
     background-size: 2000px;
     font-family: Arial;
 }
@@ -29,7 +29,7 @@ body {
     width: 925px;
     height: 1200px;
     /*max-height: 875px;*/
-    background: url("../Classroom-Images/papercurve-top-layer2.png");
+    background: url("../PersonalProfile-Images/papercurve-top-layer2.png");
     background-size: cover;
     padding: 5em 0 0 0;
     margin: 0 auto;
@@ -55,7 +55,7 @@ body {
     top: 10px;
     transform-origin: top;
     transform: rotate(2deg);
-    background: url("../Classroom-Images/papertexture-bottom-layers1.png");
+    background: url("../PersonalProfile-Images/papertexture-bottom-layers1.png");
     z-index: -1;
 }
 
@@ -64,7 +64,7 @@ body {
     top: 10px;
     transform-origin: bottom;
     transform: skew(-2.5deg) ;
-    background: url("../Classroom-Images/papertexture-bottom-layers2.png");
+    background: url("../PersonalProfile-Images/papertexture-bottom-layers2.png");
     z-index: -2;
 }
 
@@ -89,6 +89,11 @@ body {
     text-transform: uppercase;
     line-height: 72px;
     margin-bottom: 20px;
+}
+
+.headshot{
+    width: 100%;
+    height: auto;
 }
 
 p{
