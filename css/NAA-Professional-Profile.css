@@ -352,16 +352,16 @@ a {
 }
 
 .campus {
-    -webkit-filter: opacity(0.8);
-    filter: opacity(0.8);
+    /*-webkit-filter: opacity(0.95);*/
+    /*filter: opacity(0.95);*/
     mix-blend-mode: multiply;
     width: 100%;
 }
 
 .media {
-    /*-webkit-filter: sepia(80%) contrast(1) opacity(0.8);*/
-    /*filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);*/
-    /*mix-blend-mode: multiply;*/
+    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
+    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+    mix-blend-mode: multiply;
     width: 100%;
 }
 
