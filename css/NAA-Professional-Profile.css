@@ -18,6 +18,12 @@ body {
     background: url("../PersonalProfile-Images/Desk-Background.png") no-repeat center;
     background-size: 2000px;
     font-family: Arial;
+    height: 1700px;
+
+}
+
+.scrollAreas{
+    overflow: auto
 }
 
 .entire-paper{
