@@ -42,8 +42,8 @@ body {
     font-family: 'Droid Serif', serif;
     font-size: 14px;
     color: #2f2f2f;
-    overflow: scroll;
-    overflow-scrolling: touch;
+    overflow: hidden;
+    /*overflow-scrolling: touch;*/
 }
 
 
@@ -57,7 +57,7 @@ body {
 }
 
 .entire-paper::before {
-    right: 40px;
+    right: 35px;
     top: 10px;
     transform-origin: top;
     transform: rotate(2deg);
@@ -67,7 +67,7 @@ body {
 
 .entire-paper::after {
     right: 80px;
-    top: 10px;
+    top: 0px;
     transform-origin: bottom;
     transform: skew(-2.5deg) ;
     background: url("../PersonalProfile-Images/papertexture-bottom-layers2.png");
@@ -144,8 +144,9 @@ a {
     word-spacing: -.31em;
     display: inline-block;
     margin: 30px 2% 0 2%;
-
-
+    overflow: scroll;
+    overflow-scrolling: touch;
+    height: 950px;
 }
 
 .collumns{
