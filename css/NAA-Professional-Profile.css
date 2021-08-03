@@ -412,19 +412,29 @@ a {
     box-sizing: border-box;
 }
 
-
+.watch{
+    transform:  rotateZ(25deg);
+    top: calc(50% - 1000px);
+    left: calc(50% - -550px);
+    width: 150px;
+    height: 1500px;
+    background: url("../PersonalProfile-Images/watchFlatLay.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    -webkit-filter: sepia(35%) contrast(1);
+    filter: sepia(35%) contrast(1);
+}
 
 .clock {
-    /*transform: scaleY(.6) rotateY(60deg) rotateX(30deg);*/
-    transform: scaleY(.8) scaleX(1) rotateY(-25deg) rotateX(45deg) rotateZ(24deg);
-
-    top: calc(50% - 700px);
-    left: calc(50% - -500px);
-    width: 150px;
-    height: 150px;
-    background: url("../PersonalProfile-Images/RadialSteel.jpg") no-repeat center;
-    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
-    filter: sepia(80%) contrast(1) opacity(0.8);
+    transform:  rotateZ(-4deg);
+    top: 654px;
+    left: 15px;
+    width: 105px;
+    height: 105px;
+    background: url("../PersonalProfile-Images/watchFace.png") no-repeat center;
+    background-size: 100%;
+    /*-webkit-filter: sepia(80%) contrast(1) opacity(0.8);*/
+    /*filter: sepia(80%) contrast(1) opacity(0.8);*/
     /*background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));*/
     border-radius: 50%;
     border: 2px solid black;
@@ -470,10 +480,10 @@ a {
 .clock::after {
     content: '';
     position: absolute;
-    background-color: black;
+    background-color: #444040;
     z-index: 11;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -481,22 +491,22 @@ a {
 }
 
 .clock .hand.second {
-    width: 4px;
+    width: 1px;
     height: 45%;
-    background-color: #ff1c1c;
+    background-color: #f86464;
     transition-delay: 0.024s;
 }
 
 .clock .hand.minute {
-    width: 6px;
+    width: 3px;
     height: 40%;
-    background-color: black;
+    background-color: #444040;
 }
 
 .clock .hand.hour {
-    width: 10px;
+    width: 5px;
     height: 35%;
-    background-color: black;
+    background-color: #444040;
 }
 
 
