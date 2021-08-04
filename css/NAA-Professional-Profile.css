@@ -596,7 +596,7 @@ background: #000000;
     min-width: 5px;
     height: 60px;
     top: calc(50%);
-    left: calc(50% - 35px);;
+    left: calc(50% - 35px);
     background: #fff;
     border-radius: 50%;
     animation: animate 5s linear infinite;
@@ -646,10 +646,37 @@ background: #000000;
     /*position: relative;*/
 }
 
+/*p.magnifiable:hover {*/
+/*    transform: scale(1.1);*/
+/*}*/
 
+.autorace .gametoggle {
+    /*transform: rotateZ(-15deg);*/
+    /*top: calc(50% - 80);*/
+    /*left: calc(50% - 200);*/
+    top: 580px;
+    left: 215px;
+    position: relative;
+    display: flex;
+    z-index: 10;
+    background: url("../PersonalProfile-Images/gameToggle.png") no-repeat center;
+    background-size: 100%;
+    width: 55px;
+    height: 55px;
+}
 
-
-
+.autorace{
+    top: calc(50% + 0px);
+    left: calc(50% + 525px);
+    transform: rotateZ(-7deg);
+    display: block;
+    z-index: 15;
+    width: 350px;
+    height: 800px;
+    background: url("../PersonalProfile-Images/Mattel_AutoRace.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+}
 
 
 
