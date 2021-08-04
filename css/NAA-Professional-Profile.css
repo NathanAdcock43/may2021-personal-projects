@@ -604,7 +604,7 @@ background: #000000;
     filter: blur(17px);
     animation-delay: calc(var(--v) * -0.5s);
     justify-content: center;
-    /*padding: 0 20px;*/
+    padding: 0 2px;
 }
 
 @keyframes animate {
@@ -650,10 +650,7 @@ background: #000000;
 /*    transform: scale(1.1);*/
 /*}*/
 
-.autorace .gametoggle {
-    /*transform: rotateZ(-15deg);*/
-    /*top: calc(50% - 80);*/
-    /*left: calc(50% - 200);*/
+#gametoggle {
     top: 495px;
     left: 215px;
     position: relative;
@@ -663,7 +660,25 @@ background: #000000;
     background-size: 100%;
     width: 55px;
     height: 55px;
+    -webkit-animation: blinkingToggle 2s ease-in-out infinite alternate;
+    -moz-animation: blinkingToggle 2s ease-in-out infinite alternate;
+    animation: blinkingToggle 2s ease-in-out infinite alternate;
 }
+
+#gametoggle:hover {
+    filter: contrast(130%);
+    cursor: url("../PersonalProfile-Images/stearingWheel.gif"), auto;
+}
+
+@-webkit-keyframes blinkingToggle {
+    from {
+        filter: contrast(100%);
+    }
+    to {
+        filter: contrast(160%);
+    }
+}
+
 
 .autorace{
     top: calc(50% + 0px);
@@ -688,52 +703,59 @@ background: #000000;
     animation: neon1 .5s ease-in-out infinite alternate;
 }
 
-.car-1{
+#car-1{
     transform: rotateZ(-45deg);
     top: 470px;
     left: 162px;
+    visibility: hidden;
 }
 
-.car-2{
+#car-2{
     transform: rotateZ(-45deg);
     top: 470px;
     left: 170px;
 }
 
-.obstacle-1{
+#obstacle-1{
     top: 425px;
     left: 234px;
+    visibility: hidden;
 }
 
-.obstacle-2{
-    top: 400px;
+#obstacle-2{
+    top: 425px;
     left: 250px;
+    visibility: hidden;
 }
 
-.obstacle-3{
+#obstacle-3{
     top: 350px;
     left: 205px;
+    visibility: hidden;
 }
 
-.obstacle-4{
+#obstacle-4{
     top: 350px;
     left: 212px;
+    visibility: hidden;
 }
 
-.lap-1{
+#lap-1{
     top: 275px;
     left: 235px;
+    visibility: hidden;
 }
 
-.lap-2{
+#lap-2{
     top: 255px;
     left: 235px;
+    visibility: hidden;
 }
 
 @-webkit-keyframes neon1 {
     from {
-        text-shadow: 0 0 10px #a04f4f, 0 0 20px #d27f7f, 0 0 30px #ee7777, 0 0 40px #ff1177,
-        0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 150px #ff1177;
+        text-shadow: 0 0 5px #a04f4f, 0 0 10px #d27f7f, 0 0 20px #ee7777, 0 0 30px #ff1177,
+        0 0 50px #ff1177, 0 0 60px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177;
     }
     to {
         text-shadow: 0 0 5px #d46161, 0 0 10px #ef7373, 0 0 15px #d25353, 0 0 20px #ff1177,
