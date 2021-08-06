@@ -59,4 +59,6 @@ $(document).ready(function() {
         $(this).data('clicks', !click);
     })
 
+//    adding notes to test something
+
 });
