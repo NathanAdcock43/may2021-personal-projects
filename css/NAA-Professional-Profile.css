@@ -371,8 +371,8 @@ a {
 }
 
 .media {
-    -webkit-filter: sepia(80%) contrast(1) opacity(0.8);
-    filter: sepia(80%) grayscale(1) contrast(1) opacity(0.8);
+    -webkit-filter: sepia(80%) contrast(1);
+    filter: sepia(80%) grayscale(1) contrast(1);
     mix-blend-mode: multiply;
     width: 100%;
 }
@@ -421,10 +421,22 @@ a {
     box-sizing: border-box;
 }
 
+.notes {
+    top: calc(50% - 590px);
+    left: calc(50% + 475px);
+    width: 300px;
+    height: 1000px;
+    background: url("../PersonalProfile-Images/noteRoller.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+    /*-webkit-filter: sepia(35%) contrast(1);*/
+    /*filter: sepia(35%) contrast(1);*/
+}
+
 .watch {
-    transform: rotateZ(25deg);
-    top: calc(50% - 1000px);
-    left: calc(50% - -550px);
+    transform: rotateZ(-25deg);
+    top: calc(50% - 150px);
+    left: calc(50% - 600px);
     width: 150px;
     height: 1500px;
     background: url("../PersonalProfile-Images/watchFlatLay.png") no-repeat center;

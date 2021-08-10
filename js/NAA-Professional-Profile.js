@@ -1,3 +1,5 @@
+
+//Watch-face current time
 setInterval(setClock, 1000)
 
 const hourHand = document.querySelector('[data-hour-hand]')
@@ -20,6 +22,7 @@ function setRotation(element, rotationRatio) {
 
 setClock()
 
+//handheld game inside desk
 
 $(document).ready(function() {
 
@@ -60,11 +63,27 @@ $(document).ready(function() {
     })
 
 
+
+
+//Calendar day of the week
+
+var days = [
+    'SUN',
+    'MON',
+    'TUE',
+    'WED',
+    'THU',
+    'FRI',
+    'SAT'
+];
+
+d = new Date();
+x = d.getDay();
+
+// alert (days[x]);
+
 });
-
-
-
-// $('.magazine').mouseover($('#starting-lens').hide()).mouseout($('#starting-lens').show());
+//Magnify feature for the Magazine
 
 (function($) {
     $.fn.magnify = function(oOptions) {
