@@ -64,7 +64,7 @@ $(document).ready(function() {
 
 
 
-
+// $('.magazine').mouseover($('#starting-lens').hide()).mouseout($('#starting-lens').show());
 
 (function($) {
     $.fn.magnify = function(oOptions) {
@@ -243,6 +243,7 @@ $(document).ready(function() {
                         $image.css('display', 'block');
                         // Create container div if necessary
                         if (!$image.parent('.magnify').length) {
+                            // $('#starting-lens').hide();
                             $image.wrap('<div class="magnify"></div>');
                         }
                         $container = $image.parent('.magnify');
