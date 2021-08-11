@@ -472,10 +472,10 @@ a {
 
 .stickMan {
     display: inline;
-    top: calc(50% - 125px);
+    top: calc(50% - 110px);
     left: calc(50% - 120px);
-    -webkit-filter: sepia(80%) contrast(1);
-    filter: sepia(80%) grayscale(1) contrast(1);
+    /*-webkit-filter: sepia(80%) contrast(1);*/
+    filter: contrast(100%);
     mix-blend-mode: multiply;
     width: 75%;
     height: 300px;
