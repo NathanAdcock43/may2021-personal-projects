@@ -65,22 +65,29 @@ $(document).ready(function() {
 
 
 
-//Calendar day of the week
+//Roll Calendar
 
-var days = [
-    'SUN',
-    'MON',
-    'TUE',
-    'WED',
-    'THU',
-    'FRI',
-    'SAT'
-];
+    let days = [
+        'SUN',
+        'MON',
+        'TUE',
+        'WED',
+        'THU',
+        'FRI',
+        'SAT'
+    ];
 
-d = new Date();
-x = d.getDay();
+    let date = new Date();
+    let day = date.getDay();
 
-// alert (days[x]);
+    $('#dayOfWeek').text(days[day]);
+
+    let months = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+    let month = months[date.getMonth()];
+
+    $('#Month').text(month);
+    $('#dayOfMonth1').text(date.getDate().toString().charAt(0));
+    $('#dayOfMonth2').text(date.getDate().toString().charAt(1));
 
 });
 //Magnify feature for the Magazine
