@@ -477,7 +477,8 @@ a {
     /*-webkit-filter: sepia(80%) contrast(1);*/
     filter: contrast(100%);
     mix-blend-mode: multiply;
-    width: 75%;
+    width: 70%;
+    margin-left: 10px;
     height: 300px;
     position: relative;
 }
