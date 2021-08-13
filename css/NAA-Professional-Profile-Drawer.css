@@ -20,7 +20,7 @@ body {
     background: url("../PersonalProfile-Images/DeskDrawer.png") no-repeat center;
     background-size: 2000px;
     font-family: Arial;
-    height: 1700px;
+    height: 1400px;
 
 }
 
@@ -741,14 +741,39 @@ background: #000000;
     }
 }
 
+.floppyDisk{
+    top: calc(50% - 185px);
+    left: calc(50% + 300px);
+    transform: rotateZ(15deg);
+    display: block;
+    z-index: 15;
+    width: 400px;
+    height: 800px;
+    background: url("../PersonalProfile-Images/FloppyDisk.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+}
+
+/*.floppyDisk:after{*/
+/*    !*top: calc(50% - 100px);*!*/
+/*    !*left: calc(50% + 200px);*!*/
+/*    transform: rotateZ(65deg) translateX(100px);*/
+/*    display: block;*/
+/*    z-index: 10;*/
+/*    width: 400px;*/
+/*    height: 800px;*/
+/*    background: url("../PersonalProfile-Images/FloppyDisk.png") no-repeat center;*/
+/*    background-size: 100%;*/
+/*    position: absolute;*/
+/*}*/
 
 .autorace{
-    top: calc(50% + 0px);
-    left: calc(50% + 525px);
+    top: calc(50% - 225px);
+    left: calc(50% - 100px);
     transform: rotateZ(-7deg);
     display: block;
     z-index: 15;
-    width: 350px;
+    width: 300px;
     height: 800px;
     background: url("../PersonalProfile-Images/Mattel_AutoRace.png") no-repeat center;
     background-size: 100%;
