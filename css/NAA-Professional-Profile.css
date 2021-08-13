@@ -436,7 +436,7 @@ a {
 
 #dayOfWeek{
     top: calc(50%  - 187px);
-    left: calc(50%  - 73px);
+    left: calc(50%  - 70px);
     width: 20px;
     height: 15px;
     position: relative;
@@ -445,7 +445,7 @@ a {
 
 #dayOfMonth1{
     top: calc(50%  - 187px);
-    left: calc(50%  - 47px);
+    left: calc(50%  - 44px);
     width: 20px;
     height: 15px;
     position: relative;
@@ -454,7 +454,7 @@ a {
 
 #dayOfMonth2{
     top: calc(50%  - 187px);
-    left: calc(50%  - 25px);
+    left: calc(50%  - 22px);
     width: 20px;
     height: 15px;
     position: relative;
@@ -463,7 +463,7 @@ a {
 
 #Month{
     top: calc(50%  - 187px);
-    left: calc(50%  - 5px);
+    left: calc(50%  );
     width: 40px;
     height: 15px;
     position: relative;
