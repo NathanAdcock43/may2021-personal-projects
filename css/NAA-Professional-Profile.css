@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+/*html{*/
+/*    background-color: black;*/
+/*}*/
 
 body {
     position: relative;
@@ -376,49 +379,67 @@ a {
 }
 
 .notes {
-    top: calc(50% - 680px);
-    left: calc(50% + 525px);
-    width: 300px;
-    height: 1000px;
+    top: calc(50% - 675px);
+    left: calc(50% + 500px);
+    width: 375px;
+    height: 900px;
     background: url("../PersonalProfile-Images/noteRoller.png") no-repeat center;
     background-size: 100%;
     position: absolute;
 }
 
+.dateContainer{
+    display: flex;
+    top: calc(50%  - 230px);
+    left: calc(50%  - 85px);
+    width: 50%;
+    justify-content: space-between;
+    position: relative;
+}
+
+#monthNums{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    /*top: calc(50%  - 187px);*/
+    /*left: calc(50%  - 70px);*/
+
+}
+
 #dayOfWeek{
-    top: calc(50%  - 187px);
-    left: calc(50%  - 70px);
+    /*top: calc(50%  - 187px);*/
+    /*left: calc(50%  - 70px);*/
     width: 20px;
     height: 15px;
-    position: relative;
-    display: inline;
+    /*position: relative;*/
+    display: flex;
 }
 
 #dayOfMonth1{
-    top: calc(50%  - 187px);
-    left: calc(50%  - 44px);
+    /*top: calc(50%  - 187px);*/
+    /*left: calc(50%  - 44px);*/
     width: 20px;
     height: 15px;
-    position: relative;
-    display: inline;
+    /*position: relative;*/
+    display: flex;
 }
 
 #dayOfMonth2{
-    top: calc(50%  - 187px);
-    left: calc(50%  - 22px);
+    /*top: calc(50%  - 187px);*/
+    /*left: calc(50%  - 22px);*/
     width: 20px;
     height: 15px;
-    position: relative;
-    display: inline;
+    /*position: relative;*/
+    display: flex;
 }
 
 #Month{
-    top: calc(50%  - 187px);
-    left: calc(50%  );
+    /*top: calc(50%  - 187px);*/
+    /*left: calc(50%  );*/
     width: 40px;
     height: 15px;
-    position: relative;
-    display: inline;
+    /*position: relative;*/
+    display: flex;
 }
 
 .stickMan {
