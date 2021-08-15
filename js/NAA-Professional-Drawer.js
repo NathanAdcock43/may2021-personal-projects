@@ -17,7 +17,7 @@ $(document).ready(function() {
             $('#car-1').css("visibility", "hidden");
             $('#lap-1').css("visibility", "hidden");
 
-            $(this).css({left: '245px'});
+            $(this).css({left: '207px'});
 
 
         } else  {
@@ -33,7 +33,7 @@ $(document).ready(function() {
             $('#car-2').css("visibility", "hidden");
             $('#lap-2').css("visibility", "hidden");
 
-            $(this).css({left: '215px'});
+            $(this).css({left: '180px'});
 
         }
         $(this).data('clicks', !click);
