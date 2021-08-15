@@ -12,7 +12,7 @@
 <body>
 <div class="notes">
     <div class="dateContainer"><p id="dayOfWeek"></p>
-      <div id="monthNums"> <p></p> <p id="dayOfMonth1"></p><p id="dayOfMonth2"></p> </div>
+        <div id="monthNums"> <p></p> <p id="dayOfMonth1"></p><p id="dayOfMonth2"></p> </div>
         <p id="Month"></p>
     </div>
 
@@ -28,18 +28,24 @@
 </div>
 <!--<img class="blind-light" src="Classroom-Images/venitian-blinds-large3.gif" alt="blind-light">-->
 <!--    <div class="plank-floor">-->
-<main class="entire-paper ">
+<main id="swup" class="entire-paper transition-fade">
     <div class="paper-date">UTC Wednesday, 17 October 1973</div>
     <div class="head">
         <header class="title">The Epoch Times</header>
     </div>
 
-    <nav class="subhead"><a class="links">Font Page</a><a class="links">Classifieds</a><a class="links">Technology</a><a
-            class="links">Comics</a><a>D</a></nav>
+    <nav class="subhead">
+        <a id="about" class="links" href="NAA-Professional-Profile.html">Font Page</a>
+        <a id="work" class="links" href="NAA-ProfileClassifieds.html">Classifieds</a>
+        <a id="projects" class="links" href="NAA-ProfileTech.html">Technology</a>
+        <a id="weather" class="links" href="NAA-ProfileWeather.html">Weather</a>
+        <a id="contact" class="links" href="NAA-ProfileDrawer.html">Editorial</a>
+    </nav>
+
     </div>
     <div class="content">
-        <div class="collumns">
-            <div class="collumn">
+        <div class="columns">
+            <div class="column">
                 <img class="headshot campus" src="PersonalProfile-Images/PersonalSiteHeadShotMasked@0.25x.png"
                      alt="Personal Headshot">
                 <div class="head"><span class="headline hl3">Finding a New Home in Tech</span>
@@ -51,7 +57,7 @@
                     that people can use". As reported in his resume Nathan attended a four year University, and while
                     his sociology degree has been greatly beneficial, the sequential concrete growth that software
                     development has provided is rewarding in a different </p></div>
-            <div class="collumn">
+            <div class="column">
                 <div class="head"><span class="headline hl5">Language cognition trends upward!</span>
                     <p><span class="headline hl6"> no signs of slowing</span></p></div>
                 Analyist project an unfettered expansion of Nathan's coding and related skills during the coming months and likely years. The last six months has been a real
@@ -67,7 +73,7 @@
                 </p>
 
             </div>
-            <div class="collumn">
+            <div class="column">
                 <div class="head"><span class="headline hl1">Nothing ventured, Nothing gained!</span>
                     <p><span class="headline hl2">Codeup's Full Stack Web Development program</span>
                     </p></div>
@@ -106,20 +112,8 @@
     </div>
 </div>
 
-<!--<div class="autorace">-->
-<!--    <i class="fas fa-tree neon" id="obstacle-1"></i>-->
-<!--    <i class="fas fa-tree neon" id="obstacle-2"></i>-->
-<!--    <i class="fas fa-tree neon" id="obstacle-3"></i>-->
-<!--    <i class="fas fas fa-trophy neon" id="obstacle-4"></i>-->
-<!--    <i class="fas fa-location-arrow neon" id="car-1"></i>-->
-<!--    <i class="fas fa-location-arrow neon" id="car-2"></i>-->
-<!--    <p class="neon" id="lap-1">Lap 1</p>-->
-<!--    <p class="neon" id="lap-2">Lap 2</p>-->
-<!--    <div id="gametoggle"></div>-->
-<!--</div>-->
 <div class="magnify" id="mag">
-<!--<div class="magnify-lens paper-weight glass" id="starting-lens" style="background: url('PersonalProfile-Images/popElectronicsLrg.png') -750px -750px no-repeat; display: block; top: 250px; left: 275px; transform: rotateZ(-3deg);"></div>-->
-<img src="PersonalProfile-Images/popElectronicsLrg.png" alt="" class="magnify-image magazine" data-magnify-src="PersonalProfile-Images/popElectronicsLrg.png">
+    <img src="PersonalProfile-Images/popElectronicsLrg.png" alt="" class="magnify-image magazine" data-magnify-src="PersonalProfile-Images/popElectronicsLrg.png">
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -129,6 +123,7 @@
         $('img').magnify();
     });
 </script>
+<script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
 <script src="js/NAA-Professional-Profile.js" rel="script"></script>
 </body>
 </html>

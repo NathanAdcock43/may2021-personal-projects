@@ -89,7 +89,56 @@ $(document).ready(function() {
     $('#dayOfMonth1').text(date.getDate().toString().charAt(0));
     $('#dayOfMonth2').text(date.getDate().toString().charAt(1));
 
+
+    //Change text on hover for the links
+
+    $("#about").hover(
+        function () {
+            $('#about').text('about me');
+        },
+        function () {
+            $('#about').text('front page');
+        }
+    );
+    $("#work").hover(
+        function () {
+            $('#work').text('work history');
+        },
+        function () {
+            $('#work').text('classifieds');
+        }
+    );
+    $("#projects").hover(
+        function () {
+            $('#projects').text('my projects');
+        },
+        function () {
+            $('#projects').text('technology');
+        }
+    );
+    $("#weather").hover(
+        function () {
+            $('#weather').text('API Demo');
+        },
+        function () {
+            $('#weather').text('Weather');
+        }
+    );
+    $("#contact").hover(
+        function () {
+            $('#contact').text('Contact Me');
+        },
+        function () {
+            $('#contact').text('Editorials');
+        }
+    );
+
 });
+
+
+
+
+
 //Magnify feature for the Magazine
 
 (function($) {
