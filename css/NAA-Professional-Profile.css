@@ -28,8 +28,6 @@ body {
     overflow: auto
 }
 
-
-
 .entire-paper {
     position: absolute;
     top: calc(50% - 450px);
@@ -47,7 +45,6 @@ body {
     font-size: 14px;
     color: #2f2f2f;
     overflow: hidden;
-    /*overflow-scrolling: touch;*/
 }
 
 
@@ -136,7 +133,6 @@ p {
 
 .links {
     border-right: solid #86807e thin;
-    /*padding-right: 9em;*/
 }
 
 a {
@@ -204,7 +200,6 @@ a {
     font-style: italic;
     font-size: 18px;
     box-sizing: border-box;
-    /*padding: 10px 0 10px 0;*/
 }
 
 .collumn .headline.hl2:before {
@@ -328,7 +323,6 @@ a {
     font-family: 'Playfair Display', serif;
     font-size: 36px;
     line-height: 44px;
-    /*font-style: italic;*/
     text-align: center;
     font-weight: 400;
     display: block;
@@ -377,47 +371,6 @@ a {
     width: 100%;
 }
 
-
-/*________________________________________________________________________________________________________________________________*/
-/*MEDIAQUERIES*/
-/*@media only all and (max-width: 1300px) {*/
-/*    .weatherforcastbox{*/
-/*        display: none;*/
-/*    }*/
-
-/*}*/
-
-/*@media only all and (max-width: 1200px) {*/
-/*    .collumn{*/
-/*        width: 31%;*/
-/*    }*/
-
-/*}*/
-
-/*@media only all and (max-width: 900px) {*/
-/*    .collumn{*/
-/*        width: 47%;*/
-/*    }*/
-
-/*}*/
-
-/*@media only all and (max-width: 600px) {*/
-/*    .collumn{*/
-/*        width: 100%;*/
-/*    }*/
-/*    .collumn + .collumn {*/
-/*        border-left: none;*/
-/*        border-bottom: 1px solid #2f2f2f;*/
-/*    }*/
-/*    header{*/
-/*        max-width: 320px;*/
-/*        font-size: 60px;*/
-/*        line-height: 54px;*/
-/*        overflow: hidden;*/
-/*    }*/
-
-/*}*/
-
 *, *::after, *::before {
     box-sizing: border-box;
 }
@@ -430,8 +383,6 @@ a {
     background: url("../PersonalProfile-Images/noteRoller.png") no-repeat center;
     background-size: 100%;
     position: absolute;
-    /*-webkit-filter: sepia(35%) contrast(1);*/
-    /*filter: sepia(35%) contrast(1);*/
 }
 
 #dayOfWeek{
@@ -474,7 +425,6 @@ a {
     display: inline;
     top: calc(50% - 110px);
     left: calc(50% - 120px);
-    /*-webkit-filter: sepia(80%) contrast(1);*/
     filter: contrast(100%);
     mix-blend-mode: multiply;
     width: 70%;
@@ -485,8 +435,8 @@ a {
 
 .watch {
     transform: rotateZ(-25deg);
-    top: calc(50% - 150px);
-    left: calc(50% - 600px);
+    top: calc(50% + 75px);
+    left: calc(50% - 675px);
     width: 150px;
     height: 1000px;
     background: url("../PersonalProfile-Images/watchFlatLay.png") no-repeat center;
@@ -498,81 +448,22 @@ a {
 
 .clock {
     transform: rotateZ(-4deg);
-    top: 654px;
-    left: 15px;
+    top: 404px;
+    left: 16px;
     width: 105px;
     height: 105px;
     background: url("../PersonalProfile-Images/watchFace.png") no-repeat center;
     background-size: 100%;
-    /*-webkit-filter: sepia(80%) contrast(1) opacity(0.8);*/
-    /*filter: sepia(80%) contrast(1) opacity(0.8);*/
-    /*background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));*/
     border-radius: 50%;
     border: 2px solid black;
     position: absolute;
 }
-
-/*.clock .number {*/
-/*    --rotation: 0;*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    text-align: center;*/
-/*    transform: rotate(var(--rotation));*/
-/*    font-size: 20px;*/
-/*    font-family: 'Playfair Display', serif*/
-/*}*/
-
-/*.clock .number1 {*/
-/*    --rotation: 30deg;*/
-/*}*/
-
-/*.clock .number2 {*/
-/*    --rotation: 60deg;*/
-/*}*/
-
-/*.clock .number3 {*/
-/*    --rotation: 90deg;*/
-/*}*/
-
-/*.clock .number4 {*/
-/*    --rotation: 120deg;*/
-/*}*/
-
-/*.clock .number5 {*/
-/*    --rotation: 150deg;*/
-/*}*/
-
-/*.clock .number6 {*/
-/*    --rotation: 180deg;*/
-/*}*/
-
-/*.clock .number7 {*/
-/*    --rotation: 210deg;*/
-/*}*/
-
-/*.clock .number8 {*/
-/*    --rotation: 240deg;*/
-/*}*/
-
-/*.clock .number9 {*/
-/*    --rotation: 270deg;*/
-/*}*/
-
-/*.clock .number10 {*/
-/*    --rotation: 300deg;*/
-/*}*/
-
-/*.clock .number11 {*/
-/*    --rotation: 330deg;*/
-/*}*/
 
 .clock .hand {
     --rotation: 0;
     position: absolute;
     bottom: 50%;
     left: 50%;
-    /*border: 1px solid #525151;*/
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     transform-origin: bottom;
@@ -624,29 +515,13 @@ background: #000000;
     background-color: #444040;
 }
 
-/*Coffee mug with steam*/
-
-
-/*.coffee::after {*/
-/*    content: '';*/
-/*    position: absolute;*/
-/*    z-index: 11;*/
-/*    width: 10px;*/
-/*    height: 10px;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    transform: translate(-50%, -50%);*/
-/*}*/
-
 .vapour {
     transform: rotateZ(0deg);
     top: calc(50% + 50px);
     left: calc(50% - 695px);
     position: absolute;
-    /*display: flex;*/
     z-index: 10;
 
-    /*justify-content: center;*/
 }
 
 .vapour .coaster .coffee span {
@@ -708,132 +583,7 @@ background: #000000;
     /*position: relative;*/
 }
 
-/*p.magnifiable:hover {*/
-/*    transform: scale(1.1);*/
-/*}*/
 
-#gametoggle {
-    top: 495px;
-    left: 215px;
-    position: relative;
-    display: flex;
-    z-index: 10;
-    background: url("../PersonalProfile-Images/gameToggle.png") no-repeat center;
-    background-size: 100%;
-    width: 55px;
-    height: 55px;
-    -webkit-animation: blinkingToggle 2s ease-in-out infinite alternate;
-    -moz-animation: blinkingToggle 2s ease-in-out infinite alternate;
-    animation: blinkingToggle 2s ease-in-out infinite alternate;
-}
-
-#gametoggle:hover {
-    filter: contrast(130%);
-    cursor: url("../PersonalProfile-Images/stearingWheel.gif"), auto;
-}
-
-@-webkit-keyframes blinkingToggle {
-    from {
-        filter: contrast(100%);
-    }
-    to {
-        filter: contrast(160%);
-    }
-}
-
-
-.autorace{
-    top: calc(50% + 0px);
-    left: calc(50% + 525px);
-    transform: rotateZ(-7deg);
-    display: block;
-    z-index: 15;
-    width: 350px;
-    height: 800px;
-    background: url("../PersonalProfile-Images/Mattel_AutoRace.png") no-repeat center;
-    background-size: 100%;
-    position: absolute;
-}
-
-.neon {
-    position: relative;
-    display: flex;
-    color: #fc0707;
-    font-family: monospace;
-    -webkit-animation: neon1 .5s ease-in-out infinite alternate;
-    -moz-animation: neon1 .5s ease-in-out infinite alternate;
-    animation: neon1 .5s ease-in-out infinite alternate;
-}
-
-#car-1{
-    transform: rotateZ(-45deg);
-    top: 470px;
-    left: 162px;
-    visibility: hidden;
-}
-
-#car-2{
-    transform: rotateZ(-45deg);
-    top: 470px;
-    left: 170px;
-}
-
-#obstacle-1{
-    top: 425px;
-    left: 234px;
-    visibility: hidden;
-}
-
-#obstacle-2{
-    top: 425px;
-    left: 250px;
-    visibility: hidden;
-}
-
-#obstacle-3{
-    top: 350px;
-    left: 205px;
-    visibility: hidden;
-}
-
-#obstacle-4{
-    top: 350px;
-    left: 212px;
-    visibility: hidden;
-}
-
-#lap-1{
-    top: 275px;
-    left: 235px;
-    visibility: hidden;
-}
-
-#lap-2{
-    top: 255px;
-    left: 235px;
-    visibility: hidden;
-}
-
-@-webkit-keyframes neon1 {
-    from {
-        text-shadow: 0 0 5px #a04f4f, 0 0 10px #d27f7f, 0 0 20px #ee7777, 0 0 30px #ff1177,
-        0 0 50px #ff1177, 0 0 60px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177;
-    }
-    to {
-        text-shadow: 0 0 5px #d46161, 0 0 10px #ef7373, 0 0 15px #d25353, 0 0 20px #ff1177,
-        0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 75px #ff1177;
-    }
-}
-
-
-/*.paper-weight {*/
-/*    position: absolute;*/
-/*    display: inline-block;*/
-/*    width: 100%;*/
-/*    height: 100%;*/
-/*    border-radius: 100%;*/
-/*    background: radial-gradient(circle at bottom, #c4e0e3, #a4d9e2 10%, #497193 80%, #344a5e 100%);*/
-/*}*/
 .paper-weight:before {
     content: "";
     position: absolute;
@@ -842,9 +592,6 @@ background: #000000;
     width: 90%;
     height: 90%;
     border-radius: 30%;
-    /*background: radial-gradient(circle at top, rgba(255, 255, 255, 0) 58%, rgb(255, 255, 255));*/
-    /*-webkit-filter: blur(100px);*/
-    /*filter: blur(100px);*/
     z-index: 2;
 }
 .paper-weight:after {
@@ -866,7 +613,6 @@ background: #000000;
     position: absolute;
     width: 100%;
     height: 100%;
-    /*background: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 65%, rgba(0, 0, 0, 0) 50%);*/
     -webkit-transform: rotateX(90deg) translateZ(-160px);
     transform: rotateX(90deg) translateZ(-160px);
     z-index: 1; }
@@ -875,7 +621,6 @@ background: #000000;
 .paper-weight.plain:before, .paper-weight.plain:after {
     display: none; }
 .paper-weight.glass {
-    /*background: radial-gradient(circle at 50% 55%, rgba(240, 245, 255, 0.8), rgba(240, 245, 255, 0.5) 40%, rgba(225, 238, 255, 0.3) 60%, rgba(175, 200, 239, 0.1));*/
     -webkit-animation: glass-anim 2s ease-out infinite;
     animation: glass-anim 2s ease-out infinite; }
 .paper-weight.glass:before {
@@ -908,14 +653,16 @@ background: #000000;
     position: relative;
 }
 
+
+
+/*Popular electronics magazine*/
 .magazine{
-    /*top: calc(50% + 225px);*/
-    /*left: calc(50% + 475px);*/
+    top: calc(50% - 100px);
+    left: calc(50% + 75px);
     transform: rotateZ(-3deg);
-    /*display: block;*/
     z-index: 15;
-    width: 525px;
-    height: 700px;
+    width: 600px;
+    height: 800px;
     background: url("../PersonalProfile-Images/popElectronicsLrg.png") no-repeat center;
     background-size: 100%;
     position: absolute;
@@ -957,10 +704,6 @@ html.magnifying > body {
     width: 300px;
     height: 300px;
     border-radius: 100%;
-    /* Multiple box shadows to achieve the glass lens effect */
-    /*box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),*/
-    /*0 0 7px 7px rgba(0, 0, 0, 0.25),*/
-    /*inset 0 0 40px 2px rgba(0, 0, 0, 0.25);*/
     border: 3px double #999ea1;
     cursor: none;
     display: none;
@@ -970,18 +713,5 @@ html.magnifying > body {
     background: #333 !important;
     opacity: 0.8;
 }
-/*.magnify > .magnify-lens.loading:after { !* Loading text *!*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 0;*/
-/*    width: 100%;*/
-/*    !*color: #fff;*!*/
-/*    content: 'Loading...';*/
-/*    font: italic normal 16px/1 Calibri, sans-serif;*/
-/*    letter-spacing: 1px;*/
-/*    margin-top: -8px;*/
-/*    text-align: center;*/
-/*    text-shadow: 0 0 2px rgba(51, 51, 51, 0.8);*/
-/*    text-transform: none;*/
-/*}*/
+
 
