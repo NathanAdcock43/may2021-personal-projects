@@ -13,14 +13,14 @@ body {
     /*height: auto;*/
     display: flex;
     flex-direction: column;
-    padding: 25% 25%;
+    /*padding: 25% 25%;*/
     overflow: scroll;
     overflow-scrolling: auto;
     /*object-fit: initial;*/
     background: url("../PersonalProfile-Images/Desk-Background.png") no-repeat center;
-    background-size: 2000px;
+    background-size: 2300px;
     font-family: Arial;
-    height: 1700px;
+    height: 1500px;
 
 }
 
@@ -32,7 +32,7 @@ body {
 
 .entire-paper {
     position: absolute;
-    top: calc(50% - 400px);
+    top: calc(50% - 450px);
     left: calc(50% - 400px);
     transform: translate(-50, -50);
     transform-origin: top;
@@ -423,8 +423,8 @@ a {
 }
 
 .notes {
-    top: calc(50% - 590px);
-    left: calc(50% + 475px);
+    top: calc(50% - 680px);
+    left: calc(50% + 525px);
     width: 300px;
     height: 1000px;
     background: url("../PersonalProfile-Images/noteRoller.png") no-repeat center;
@@ -488,7 +488,7 @@ a {
     top: calc(50% - 150px);
     left: calc(50% - 600px);
     width: 150px;
-    height: 1500px;
+    height: 1000px;
     background: url("../PersonalProfile-Images/watchFlatLay.png") no-repeat center;
     background-size: 100%;
     position: absolute;

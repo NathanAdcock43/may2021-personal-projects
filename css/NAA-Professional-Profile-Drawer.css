@@ -2,8 +2,12 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: black;
+    height: 1200px;
+}
 
-body {
+#prime {
     position: relative;
     top: -100px;
     bottom: 0;
@@ -20,13 +24,13 @@ body {
     background: url("../PersonalProfile-Images/DeskDrawer.png") no-repeat center;
     background-size: 2000px;
     font-family: Arial;
-    height: 1400px;
+    height: 1200px;
 
 }
 
-.scrollAreas {
-    overflow: auto
-}
+/*.scrollAreas {*/
+/*    overflow: auto*/
+/*}*/
 
 
 
@@ -832,19 +836,21 @@ background: #000000;
 #lap-1{
     top: 290px;
     left: 200px;
+    font-weight: bolder;
     visibility: hidden;
 }
 
 #lap-2{
     top: 265px;
     left: 200px;
+    font-weight: bolder;
     visibility: hidden;
 }
 
 @-webkit-keyframes neon1 {
     from {
         text-shadow: 0 0 30px #a04f4f, 0 0 40px #d27f7f, 0 0 50px #ee7777, 0 0 60px #ff1177,
-        0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 90px #ff1177, 0 0 100px #ff1177;
+        0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 85px #ff1177, 0 0 90px #ff1177;
     }
     to {
         text-shadow: 0 0 15px #d46161, 0 0 25px #ef7373, 0 0 35px #d25353, 0 0 45px #ff1177,
