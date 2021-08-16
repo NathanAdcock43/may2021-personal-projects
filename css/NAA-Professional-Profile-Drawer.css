@@ -39,6 +39,7 @@ body {
     -moz-animation: blinkingDisk 1.5s ease-in-out infinite alternate;
     animation: blinkingDisk 1.5s ease-in-out infinite alternate;
     cursor: pointer;
+    border: none;
 }
 
 @-webkit-keyframes blinkingDisk {
@@ -134,7 +135,7 @@ body {
 }
 
 #obstacle-1{
-    top: 425px;
+    top: 400px;
     left: 227px;
     visibility: hidden;
 }
@@ -152,20 +153,20 @@ body {
 }
 
 #obstacle-4{
-    top: 350px;
+    top: 370px;
     left: 150px;
     visibility: hidden;
 }
 
 #lap-1{
-    top: 290px;
+    top: 275px;
     left: 200px;
     font-weight: bolder;
     visibility: hidden;
 }
 
 #lap-2{
-    top: 265px;
+    top: 260px;
     left: 200px;
     font-weight: bolder;
     visibility: hidden;
@@ -206,7 +207,7 @@ body {
     font-size: 50px;
     line-height: 0;
     text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
-    color: #9c8468;
+    color: #806c55;
     opacity: 0.4;
 }
 

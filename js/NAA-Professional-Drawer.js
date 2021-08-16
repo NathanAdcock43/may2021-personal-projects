@@ -17,7 +17,7 @@ $(document).ready(function() {
             $('#car-1').css("visibility", "hidden");
             $('#lap-1').css("visibility", "hidden");
 
-            $(this).css({left: '207px'});
+            $(this).css({left: '180px'});
 
 
         } else  {
@@ -33,14 +33,14 @@ $(document).ready(function() {
             $('#car-2').css("visibility", "hidden");
             $('#lap-2').css("visibility", "hidden");
 
-            $(this).css({left: '180px'});
+            $(this).css({left: '207px'});
 
         }
         $(this).data('clicks', !click);
     })
 
 
-//    close drawer link back to home page switch text effect
+//    close drawer link back to home page switch text effect and relocate to homepage
 
     function goToURL() {
         location.href = 'NAA-Professional-Profile.html';
@@ -59,4 +59,12 @@ $(document).ready(function() {
     $("#closeDrawer").click(function () {
         window.location.replace("NAA-Professional-Profile.html")
     });
+
+//    set floppy disk to load resume on click
+
+    // $(".floppyDisk").click(function() {
+    //     // hope the server sets Content-Disposition: attachment!
+    //     window.location = 'NathanAdcockResume1.pdf';
+    // });
+
 });

@@ -175,8 +175,8 @@ p {
 }
 
 .links:hover {
-    color: #2f2f2f;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.06), 1px 1px 1px rgba(0, 0, 0, 0.27);
+    color: rgba(47, 47, 47, 0.87);
+    /*text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.06), 1px 1px 1px rgba(0, 0, 0, 0.27);*/
 }
 
 .links:active {
