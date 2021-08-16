@@ -39,4 +39,24 @@ $(document).ready(function() {
         $(this).data('clicks', !click);
     })
 
+
+//    close drawer link back to home page switch text effect
+
+    function goToURL() {
+        location.href = 'NAA-Professional-Profile.html';
+
+    }
+
+    $(".closeDrawer").hover(
+        function () {
+            $('#close').text('Back to home page');
+        },
+        function () {
+            $('#close').text('Close Drawer');
+        }
+    )
+
+    $("#closeDrawer").click(function () {
+        window.location.replace("NAA-Professional-Profile.html")
+    });
 });
