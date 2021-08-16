@@ -229,3 +229,43 @@ body {
     to {top: 0; opacity: 1;}
 }
 
+.notepad{
+    Top: calc(50% + 75px);
+    left: calc(50% + 550px);
+    transform: rotateZ(2deg);
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+    width: 300px;
+    height: 450px;
+    background: url("../PersonalProfile-Images/notebook.png") no-repeat center;
+    background-size: 100%;
+    position: absolute;
+}
+
+@font-face {
+    font-family: "Indie_Flower";
+    src: url("../fonts/Indie_Flower/IndieFlower-Regular.ttf") format("truetype");
+}
+
+
+.messageForm{
+    font-family: Indie_Flower, serif;
+    Top: calc(50% - 165px);
+    left: calc(50% - 100px );
+    position: absolute;
+    font-size: 15px;
+}
+
+.formFields{
+    font-family: Indie_Flower, serif;
+    display: flex;
+    text-align: left;
+    width: 90%;
+    background: transparent;
+    border-top: none;
+    border-right: rgba(119, 152, 219, 0.87) solid 1px;
+    border-left: rgba(119, 152, 219, 0.87) solid 1px;
+    border-bottom: rgba(119, 152, 219, 0.87) solid 1px;
+    padding-left: 3px;
+}
