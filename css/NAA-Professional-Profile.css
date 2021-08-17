@@ -23,7 +23,7 @@ body {
     background: url("../PersonalProfile-Images/Desk-Background.png") no-repeat center;
     background-size: 2300px;
     font-family: Arial;
-    height: 1500px;
+    height: 1400px;
 
 }
 
@@ -114,9 +114,7 @@ html.is-leaving .transition-fade {
 
 /*Content styling inside of the paper body*/
 
-.head {
-    margin: 0 10% 20px 0;
-}
+
 
 .paper-date{
     font-family: 'Playfair Display', serif;
@@ -148,8 +146,23 @@ p {
     margin-bottom: 20px;
 }
 
+.classifiedHeader{
+    background-color: #2f2f2f;
+    color: #c9c4be;
+}
+
+.classifiedSpace{
+    margin-bottom: 5px !important;
+    margin-right: 0 !important;
+}
+
 .head {
+    margin: 0 10% 20px 0;
     text-align: center;
+}
+
+.secondaryHead{
+    margin: 0 10% 0 0 !important;
 }
 
 .subhead {
@@ -161,7 +174,37 @@ p {
     padding: 12px 0 12px 0;
     margin: 0 10% 0 1%;
     text-decoration: none;
-    color: black;
+    color: #2f2f2f;
+}
+.subheadCl{
+    padding: 0 !important;
+    font-size: 14px !important;
+    font-weight: bolder !important;
+    margin: 0 !important;
+}
+
+/*Makes font easier to read*/
+.magnifiable{
+    margin-bottom: 5px;
+}
+
+.magnifiable:hover {
+    font-size: 150%;
+    line-height: 100%;
+    word-spacing: 2px;
+    word-wrap: break-word;
+}
+
+.pageTitle{
+    margin: 0 0 0 1% !important;
+    padding: 0 !important;
+    border-top: unset !important;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    /*display: inline-block;*/
+    font-size: 75px;
+    transform: scaleY(0.7);
+    transform-origin: 0 0;
 }
 
 .links {
@@ -202,6 +245,10 @@ a {
     overflow: scroll;
     overflow-scrolling: touch;
     height: 950px;
+}
+
+.secondaryPages{
+    margin: 0 !important;
 }
 
 .columns {
