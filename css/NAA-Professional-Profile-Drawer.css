@@ -268,4 +268,47 @@ body {
     border-left: rgba(119, 152, 219, 0.87) solid 1px;
     border-bottom: rgba(119, 152, 219, 0.87) solid 1px;
     padding-left: 3px;
+    font-weight: bolder;
 }
+
+.field2{
+    padding-left: 0 !important;
+}
+
+.field3{
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    /*color: -internal-light-dark(black, white);*/
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: unset;
+    text-align: center !important;
+    appearance: auto;
+    /*background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));*/
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    /*font: 400 13.3333px Arial;*/
+    padding:unset;
+    /*border-width: unset;*/
+    /*border-style: unset;*/
+    /*border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));*/
+    border-image: unset;
+}
+
+.field3:hover{
+   background-color: #7798db;
+    cursor: pointer;
+}
+
+.field3:active{
+    background-color: #ef7373;
+}
+
+.field3:focus{
+    background-color: #ef7373;
+}
+
