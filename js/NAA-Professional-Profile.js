@@ -116,12 +116,12 @@ $(document).ready(function() {
             $('#projects').text('technology');
         }
     );
-    $("#weather").hover(
+    $("#comics").hover(
         function () {
-            $('#weather').text('API Demo');
+            $('#comics').text('For Fun');
         },
         function () {
-            $('#weather').text('Weather');
+            $('#comics').text('Comics');
         }
     );
     $("#contact").hover(
