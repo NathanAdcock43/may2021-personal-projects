@@ -452,10 +452,40 @@ a {
     font-size: 12px;
 }
 
-.campus {
-    /*-webkit-filter: opacity(0.95);*/
-    /*filter: opacity(0.95);*/
+.comicsContent{
+    margin-top: 0;
+}
+
+.comicsHolder{
+    width: 85%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.comics{
+    -webkit-filter: grayscale(10%) opacity(0.95);
+    filter: grayscale(10%) opacity(0.95);
     mix-blend-mode: multiply;
+    width: 100%;
+}
+
+.campus {
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+
+.techPics {
+    -webkit-filter: grayscale(40%) opacity(0.95);
+    filter: grayscale(40%) opacity(0.95);
+    mix-blend-mode: multiply;
+    width: 100%;
+}
+
+.moviePic {
+    -webkit-filter: grayscale(50%) contrast(110%) opacity(0.95);
+    filter: grayscale(50%) contrast(110%) opacity(0.95);
+    /*mix-blend-mode: multiply;*/
     width: 100%;
 }
 
