@@ -118,10 +118,10 @@ $(document).ready(function() {
     );
     $("#comics").hover(
         function () {
-            $('#comics').text('For Fun');
+            $('#comics').text('for fun');
         },
         function () {
-            $('#comics').text('Comics');
+            $('#comics').text('comics');
         }
     );
     $("#contact").hover(
